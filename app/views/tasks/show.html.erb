@@ -1,8 +1,10 @@
 <h1>See details of your task</h1>
 
-
 <div>
   <h2>Title : <%= @task.title %></h2>
   <span>Details : <%= @task.details %></span>
 
+  <%= link_to  "Back to the list", "/tasks" %>
+  <br>
+  <%= link_to  "Edit", edit_path(@task) %>
 </div>

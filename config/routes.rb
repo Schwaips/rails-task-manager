@@ -7,10 +7,12 @@ Rails.application.routes.draw do
 
   # VIEW
   get 'tasks' => 'tasks#index'
-  get 'tasks/:id' => 'tasks#show'
+  get 'tasks/:id' => 'tasks#show', as: :task
 
   # UPDATE
-  get 'tasks/:id/edit' => 'tasks#edit'
-  patch 'tasks'
+  get 'tasks/:id/edit' => 'tasks#edit', as: :edit
+  patch 'tasks/:id' => 'tasks#update'
 
+  # DELETE
+  delete 'tasks/:id' => 'tasks#destroy'
 end
