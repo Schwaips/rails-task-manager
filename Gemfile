@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.7'
 # bootstrap pour form
 gem 'simple_form'
 # font awesome checkbox
-gem "font-awesome-rails"
+gem 'font-awesome-sass', '~> 5.6.1'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

@@ -1,17 +1,18 @@
 <h1>Create a new task</h1>
 
-<%= form_for(@task) do |t| %>
-  <%= t.label :title %>
-  <%= t.text_field :title %>
-  <br>
-  <br>
-  <%= t.label :details %>
-  <%= t.text_field :details %>
-  <br>
-  <br>
-  <%= t.submit %>
+
+<div class="form-group">
+  <%= form_for(@task) do |t| %>
+    <%= t.label :title %>
+    <%= t.text_field :title %>
+    <br>
+    <br>
+    <%= t.label :details %>
+    <%= t.text_field :details %>
+    <br>
+    <br>
+    <%= t.submit class: "btn btn-primary" %>
 <% end %>
-
-
+</div>
 
 <%= link_to  "Back to the list", "/tasks" %>
