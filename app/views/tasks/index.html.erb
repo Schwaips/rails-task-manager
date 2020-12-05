@@ -1,0 +1,18 @@
+<h1>All tasks list</h1>
+
+<div class="task-box">
+  <% @tasks.each do |task| %>
+
+    <span>Title: <%= task.title %></span>
+    <br>
+    <span>Details: <%= task.details  %></span>
+     <br>
+    <span>Completed: <%= task.completed %></span>
+    <%# <span><%= @checkbox %>
+    <br>
+    <br>
+</div>
+
+  <% end %>
+
+  <%= link_to  "Create a new task", "/tasks/new" %>
