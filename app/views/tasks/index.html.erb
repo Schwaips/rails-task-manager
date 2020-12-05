@@ -5,19 +5,23 @@
 <br>
 <br>
 
-<div class="task-box">
-  <% @tasks.each do |task| %>
-    <span>Title: <%= link_to task.title, task_path(task) %></span>
-    <br>
-    <span>Details: <%= task.details  %></span>
-     <br>
-    <span>Completed: <%= task.completed %></span>
-    <br>
-    <%= link_to  "Voir", task_path(task) %>
-    <br>
-    <br>
-</div>
-
+<table class="table">
+   <tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Completed?</th>
+    <th> Lien </th>
+  </tr>
+    <% @tasks.each do |task| %>
+  <tr>
+    <td><%= link_to task.title, task_path(task) %></td>
+    <td><%= task.details  %></td>
+    <td><%= task.completed %></td>
+    <td><%= link_to  "Voir", task_path(task) %></td>
+  </tr>
   <% end %>
+</table>
+
+
 
   <%= link_to  "Create a new task", tasks_new_path %>
