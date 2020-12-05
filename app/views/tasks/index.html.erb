@@ -1,14 +1,19 @@
 <h1>All tasks list</h1>
 
+<%= link_to  "Create a new task", tasks_new_path %>
+
+<br>
+<br>
+
 <div class="task-box">
   <% @tasks.each do |task| %>
-
     <span>Title: <%= link_to task.title, task_path(task) %></span>
     <br>
     <span>Details: <%= task.details  %></span>
      <br>
     <span>Completed: <%= task.completed %></span>
-
+    <br>
+    <%= link_to  "Voir", task_path(task) %>
     <br>
     <br>
 </div>

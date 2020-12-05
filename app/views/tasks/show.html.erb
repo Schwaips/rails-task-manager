@@ -7,4 +7,9 @@
   <%= link_to  "Back to the list", "/tasks" %>
   <br>
   <%= link_to  "Edit", edit_path(@task) %>
+
+  <%= link_to "Effacer la tâche",
+            destroy_path,
+            method: :delete,
+            data: { confirm: "Effacer #{@task.title}?" } %>
 </div>
